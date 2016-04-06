@@ -1,0 +1,23 @@
+* {
+    font-family: 'Amatic SC', cursive!important;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+}
+
+.title {
+    color: #006064;
+    font-size: 50;
+    padding-bottom: 100px;
+}
+
+.button {
+    color: blue;
+    padding-top: 300px;
+    width: 100%;
+}
+
+body {
+    background: #BBDEFB!important;
+}
