@@ -74,8 +74,8 @@ function showPosition(position) {
 function getZipCode() {
     var zip = document.getElementById("zipcode").value;
     
-    var _clientId = "&client_id=MjUyNjgyOHwxNDU5MDIzOTAx";
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=" + zip + client_id;
+    var _clientId = "API KEY";
+    var _url = "https://api.seatgeek.com/2/recommendations?events.id=API KEY&postal_code=" + zip + client_id;
     // _url.concat(zip, client_id);
     document.getElementById("displayZip").innerHTML = _url;
 
