@@ -73,10 +73,10 @@ function showPosition(position) {
  */
 function getZipCode() {
     var zip = document.getElementById("zipcode").value;
-    
-    var _clientId = "API KEY";
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=API KEY&postal_code=" + zip + client_id;
-    // _url.concat(zip, client_id);
-    document.getElementById("displayZip").innerHTML = _url;
+
+    var _clientId = "&client_id=API KEY";
+    var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
+    var _finalUrl = _url + zip + _clientId;
+    document.getElementById("displayZip").innerHTML = _finalUrl;
 
 }
