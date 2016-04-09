@@ -71,12 +71,12 @@ function showPosition(position) {
  * output: none
  * gets zipcode from the zipcode text field
  */
-function getZipCode() {
+function createURL() {
     var zip = document.getElementById("zipcode").value;
-    
-    var _clientId = "API KEY";
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=API KEY&postal_code=" + zip + client_id;
-    // _url.concat(zip, client_id);
-    document.getElementById("displayZip").innerHTML = _url;
+    var format = "&format=xml"
+    var _clientId = "&client_id=API KEY"; // API key removed for github
+    var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
+    var _finalUrl = _url + zip + _clientId + format;
+    document.getElementById("displayURL").innerHTML = _finalUrl;
 
 }
