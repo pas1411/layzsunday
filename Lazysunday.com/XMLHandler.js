@@ -10,10 +10,10 @@ var _finalUrl;
 function createURL() {
     var zip = document.getElementById("zipcode").value;
     var format = "&format=xml"
-    var _clientId = "&client_id=MjUyNjgyOHwxNDU5MDIzOTAx";
+    var _clientId = "&client_id=API KEY";
     var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
     _finalUrl = _url + zip + _clientId + format;
-    document.getElementById("displayURL").innerHTML = _finalUrl;
+    // document.getElementById("displayURL").innerHTML = _finalUrl; // debugging
 
 }
 
@@ -33,26 +33,21 @@ function loadDoc() {
     };
     var zip = document.getElementById("zipcode").value;
     var format = "&format=xml"
-    var _clientId = "&client_id=MjUyNjgyOHwxNDU5MDIzOTAx";
+    var _clientId = "&client_id=API KEY";
     var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
     _finalUrl = _url + zip + _clientId + format;
 
-    xhttp.open("GET", "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=28209&client_id=MjUyNjgyOHwxNDU5MDIzOTAx&format=xml", true);
+    xhttp.open("GET", _finalUrl, true);
     xhttp.send();
 }
 
 function myFunction(xml) {
-    var i;
+    var i, buyTickets;
     var xmlDoc = xml.responseXML;
-    var table = "<tr><th>Artist</th><th>Buy Tickets</th></tr>";
     var x = xmlDoc.getElementsByTagName("recommendations");
-    // loop through entire document
     for (i = 0; i < x.length; i++) {
-        table += "<tr><td>" +
-            x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
-            "</td><td>" +
-            x[i].getElementsByTagName("url")[0].childNodes[0].nodeValue +
-            "</td></tr>";
+        buyTickets = x[i].getElementsByTagName("url")[2].childNodes[0].nodeValue;
     }
-    document.getElementById("demo").innerHTML = table;
+    document.getElementById("demo").innerHTML = window.open(buyTickets);
+
 }
