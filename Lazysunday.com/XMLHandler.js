@@ -2,22 +2,6 @@ var xmlDoc;
 var xmlloaded = false;
 var _finalUrl;
 
-/*
- * input: none
- * output: none
- * gets zipcode from the zipcode text field
- */
-function createURL() {
-    var zip = document.getElementById("zipcode").value;
-    var format = "&format=xml"
-    var _clientId = "&client_id=API KEY";
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
-    _finalUrl = _url + zip + _clientId + format;
-    // document.getElementById("displayURL").innerHTML = _finalUrl; // debugging
-
-}
-
-
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -50,4 +34,13 @@ function myFunction(xml) {
     }
     document.getElementById("demo").innerHTML = window.open(buyTickets);
 
+}
+
+function validateZipCode(zip) {
+    var zip = document.getElementById("zipcode").value;
+    if (zip.length != 5) {
+        window.alert("Please enter a valid zip code");
+    } else {
+        return true;
+    }
 }
