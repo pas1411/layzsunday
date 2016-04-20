@@ -1,8 +1,8 @@
 body {
-	margin: 0;
-     background: url(http://wallpaper.pickywallpapers.com/1440x900/coffee-owl.jpg);
-     background-size: 1440px 800px;
-     background-repeat:no-repeat;
+    margin: 0;
+    background: url(http://wallpaper.pickywallpapers.com/1440x900/coffee-owl.jpg);
+    background-size: 1440px 800px;
+    background-repeat: no-repeat;
     display: compact;
 }
 
@@ -34,20 +34,9 @@ body {
     padding-bottom: 2.5%;
 }
 
-@media screen and (min-width: 991px) {
-    #mobilebuttonactive {
-        padding-bottom: 2.5%;
+@media screen and (max-width: 991px) {
+    #zipCodeForm {
+        margin-bottom: 2.5%;
+        margin-top: 2.5%;
     }
 }
-font-family: 'Palanquin Dark', sans-serif;
-ont-family: 'Amatic SC', cursive;
-#006064
-
-background: rgba(179,220,237,1);
-background: -moz-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 16%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(179,220,237,1)), color-stop(16%, rgba(179,220,237,1)), color-stop(50%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
-background: -webkit-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 16%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 16%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 16%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-background: radial-gradient(ellipse at center, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 16%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
