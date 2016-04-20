@@ -78,5 +78,4 @@ function createURL() {
     var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
     var _finalUrl = _url + zip + _clientId + format;
     document.getElementById("displayURL").innerHTML = _finalUrl;
-
 }
