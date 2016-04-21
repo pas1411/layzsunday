@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var xmlDoc;
 var xmlloaded = false;
 var _finalUrl;

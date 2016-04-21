@@ -45,37 +45,3 @@ function visitSite(clicked_id) {
         window.open(location);
     }
 }
-
-/*
- * input: none
- * output: none
- * when button is clicked ask user for permission to get current position display this location in a <p>
- */
-var x = document.getElementById("geoloc");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-}
-
-/*
- * input: none
- * output: none
- * gets zipcode from the zipcode text field
- */
-function createURL() {
-    var zip = document.getElementById("zipcode").value;
-    var format = "&format=xml"
-    var _clientId = "&client_id=API KEY"; // API key removed for github
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
-    var _finalUrl = _url + zip + _clientId + format;
-    document.getElementById("displayURL").innerHTML = _finalUrl;
-}
