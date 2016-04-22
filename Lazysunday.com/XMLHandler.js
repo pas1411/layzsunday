@@ -10,7 +10,7 @@ var _finalUrl;
 function createURL() {
     var zip = document.getElementById("zipcode").value;
     var format = "&format=xml"
-    var _clientId = "&client_id=API KEY";
+    var _clientId = "&client_id=MjUyNjgyOHwxNDU5MDIzOTAx";
     var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
     _finalUrl = _url + zip + _clientId + format;
     // document.getElementById("displayURL").innerHTML = _finalUrl; // debugging
@@ -36,9 +36,17 @@ function loadDoc() {
 }
 
 function myFunction(xml) {
-    var i, buyTickets;
-    var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("recommendations");
+    var buyTickets,
+    	// xml document
+    	xmlDoc = xml.responseXML,
+    	// genres of music
+    	rock = document.getElementById("rock"),
+    	pop = document.getElementById("pop"),
+    	rap = document.getElementById("rap"),
+    	country = document.getElementById("country"),
+    	alt = document.getElementById("altern");
+    	x = xmlDoc.getElementsByTagName("recommendations");
+
     for (i = 0; i < x.length; i++) {
         buyTickets = x[i].getElementsByTagName("url")[2].childNodes[0].nodeValue;
     }
