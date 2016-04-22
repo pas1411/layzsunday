@@ -45,38 +45,3 @@ function visitSite(clicked_id) {
         window.open(location);
     }
 }
-
-/*
- * input: none
- * output: none
- * when button is clicked ask user for permission to get current position display this location in a <p>
- */
-var x = document.getElementById("geoloc");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-}
-
-/*
- * input: none
- * output: none
- * gets zipcode from the zipcode text field
- */
-function getZipCode() {
-    var zip = document.getElementById("zipcode").value;
-    
-    var _clientId = "API KEY";
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=API KEY&postal_code=" + zip + client_id;
-    // _url.concat(zip, client_id);
-    document.getElementById("displayZip").innerHTML = _url;
-
-}
