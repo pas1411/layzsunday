@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var xmlDoc;
 var xmlloaded = false;
 var _finalUrl;
@@ -32,12 +31,6 @@ function loadDoc() {
             myFunction(xhttp);
         }
     };
-    var zip = document.getElementById("zipcode").value;
-    var format = "&format=xml"
-    var _clientId = "&client_id=API KEY";
-    var _url = "https://api.seatgeek.com/2/recommendations?events.id=1162104&postal_code=";
-    _finalUrl = _url + zip + _clientId + format;
-
     xhttp.open("GET", _finalUrl, true);
     xhttp.send();
 }
